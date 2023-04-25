@@ -1,7 +1,7 @@
+{
   "name": "yet-another-lightbox-starter",
   "version": "0.1.0",
   "description": "A react lightbox starter use Yet Another React Lightbox",
-  "private": true,
   "homepage": "http://area44.github.io/yet-another-lightbox-starter",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
