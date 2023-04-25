@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
 
-function App() {
+import PhotoAlbum from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+
+import photos from "./data/photos";
+import slides from "./data/slides";
+
+export default function PhotoGallery() {
+  const [index, setIndex] = React.useState(-1);
+  const thumbnailsRef = React.useRef(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PhotoAlbum
+        layout="rows"
+        photos={photos}
+        targetRowHeight={150}
+        onClick={({ index }) => setIndex(index)}
+      />
+
+      <Lightbox
+        open={index >= 0}
+        index={index}
+        close={() => setIndex(-1)}
+        slides={slides}
+        plugins={[Thumbnails]}
+        thumbnails={{ ref: thumbnailsRef }}
+        on={{
+          click: () => {
+            (thumbnailsRef.current?.visible
+              ? thumbnailsRef.current?.hide
+              : thumbnailsRef.current?.show)?.();
+          },
+        }}
+      />
+    </>
   );
 }
-
-export default App;

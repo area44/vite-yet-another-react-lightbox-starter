@@ -1,15 +1,19 @@
 {
   "name": "yet-another-react-lightbox-starter",
   "version": "0.1.0",
+  "description": "A react lightbox starter use Yet Another React Lightbox",
   "private": true,
+  "homepage": "http://area44.github.io/yet-another-react-lightbox-starter",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-photo-album": "^2.0.4",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,6 +27,7 @@
       "react-app/jest"
     ]
   },
+  "packageManager": "pnpm@8.3.1",
   "browserslist": {
     "production": [
       ">0.2%",
