@@ -1,5 +1,5 @@
 # To get started with Astro see: https://create-react-app.dev
-name: Build with React
+name: Deploy React site to Pages
 
 on:
   pull_request:
