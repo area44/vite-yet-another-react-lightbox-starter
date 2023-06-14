@@ -11,7 +11,7 @@ pnpm install
 pnpm start
 ```
 
-Visit live at http://localhost:3000.
+Visit live at http://localhost:5173.
 
 ## License
 

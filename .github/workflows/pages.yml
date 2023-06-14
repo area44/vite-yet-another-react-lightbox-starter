@@ -35,17 +35,17 @@ jobs:
         with:
           path: |
             build
-          key: ${{ runner.os }}-react-build-${{ hashFiles('build') }}
+          key: ${{ runner.os }}-vite-build-${{ hashFiles('dist') }}
           restore-keys: |
-            ${{ runner.os }}-react-build-
+            ${{ runner.os }}-vite-dist-
       - name: Install dependencies
         run: pnpm install
-      - name: Build with React
+      - name: Build with Vite
         run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: build
+          path: "./dist"
 
   deploy:
     environment:
