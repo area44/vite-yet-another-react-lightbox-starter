@@ -1,5 +1,5 @@
-# To get started with React see: https://create-react-app.dev
-name: Deploy React site to Pages
+# To get started with Vite see: https://vitejs.dev
+name: Deploy Vite site to Pages
 
 on:
   push:
