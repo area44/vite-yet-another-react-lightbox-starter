@@ -1,9 +1,8 @@
 {
+  "name": "@area44/vite-yet-another-react-lightbox-starter",
   "private": true,
-  "name": "yet-another-lightbox-starter",
   "version": "1.0.0",
   "description": "A react lightbox starter use Yet Another React Lightbox",
-  "homepage": "http://area44.github.io/yet-another-lightbox-starter",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

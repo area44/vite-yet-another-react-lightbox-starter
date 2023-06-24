@@ -1,12 +1,12 @@
-# Yet Another Lightbox Starter
+# Vite Yet Another React Lightbox Starter
 
 A react lightbox starter use [Yet Another React Lightbox](https://yet-another-react-lightbox.com).
 
 ## Develop locally
 
 ```bash
-git clone https://github.com/AREA44/yet-another-lightbox-starter
-cd yet-another-lightbox-starter
+git clone https://github.com/AREA44/vite-yet-another-react-lightbox-starter
+cd vite-yet-another-react-lightbox-starter
 pnpm install
 pnpm start
 ```
