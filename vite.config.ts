@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/vite-yet-another-react-lightbox-starter/",
+  base: process.env.CI ? "/vite-yet-another-react-lightbox-starter/" : undefined,
   resolve: {
     alias: {
       '@': path.resolve('./src')
