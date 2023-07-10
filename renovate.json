@@ -1,7 +1,7 @@
 {
-  "extends": ["config:base", ":dependencyDashboardApproval"],
+  "extends": ["config:base"],
   "dependencyDashboard": true,
   "labels": ["renovate"],
   "automerge": true,
-  "prCreation": "approval"
+  "schedule": ["before 4am on Monday"]
 }
