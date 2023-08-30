@@ -15,4 +15,4 @@ Visit live at http://localhost:5173.
 
 ## License
 
-Licensed under the [MIT](LICENSE) license.
+Licensed under the [MIT License](LICENSE).
