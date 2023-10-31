@@ -46,6 +46,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-vite-dist-
 
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Build with Vite
         run: pnpm build
 
