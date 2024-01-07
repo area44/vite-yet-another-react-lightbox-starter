@@ -19,15 +19,15 @@ dependencies:
     version: 2.3.0(react@18.2.0)
   vite:
     specifier: ^5.0.11
-    version: 5.0.11(@types/node@20.10.6)
+    version: 5.0.11(@types/node@20.10.7)
   yet-another-react-lightbox:
     specifier: ^3.15.6
     version: 3.15.6(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@types/node':
-    specifier: ^20.10.6
-    version: 20.10.6
+    specifier: ^20.10.7
+    version: 20.10.7
   '@types/react':
     specifier: ^18.2.47
     version: 18.2.47
@@ -748,8 +748,8 @@ packages:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
     dev: true
 
-  /@types/node@20.10.6:
-    resolution: {integrity: sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw==}
+  /@types/node@20.10.7:
+    resolution: {integrity: sha512-fRbIKb8C/Y2lXxB5eVMj4IU7xpdox0Lh8bUPEdtLysaylsml1hOOx1+STloRs/B9nf7C6kPRmmg/V7aQW7usNg==}
     dependencies:
       undici-types: 5.26.5
 
@@ -926,7 +926,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.23.3(@babel/core@7.23.6)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 5.0.11(@types/node@20.10.6)
+      vite: 5.0.11(@types/node@20.10.7)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1885,7 +1885,7 @@ packages:
       punycode: 2.3.0
     dev: true
 
-  /vite@5.0.11(@types/node@20.10.6):
+  /vite@5.0.11(@types/node@20.10.7):
     resolution: {integrity: sha512-XBMnDjZcNAw/G1gEiskiM1v6yzM4GE5aMGvhWTlHAYYhxb7S3/V1s3m2LDHa8Vh6yIWYYB0iJwsEaS523c4oYA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -1913,7 +1913,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.10.6
+      '@types/node': 20.10.7
       esbuild: 0.19.5
       postcss: 8.4.32
       rollup: 4.4.1
