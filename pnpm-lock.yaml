@@ -24,8 +24,8 @@ importers:
         specifier: ^6.3.5
         version: 6.3.5(@types/node@22.15.31)
       yet-another-react-lightbox:
-        specifier: ^3.23.2
-        version: 3.23.2(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^3.23.3
+        version: 3.23.3(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@types/node':
         specifier: ^22.15.31
@@ -1140,8 +1140,8 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yet-another-react-lightbox@3.23.2:
-    resolution: {integrity: sha512-nEEtFejdUTeF5VLVO0/uZ+Kw+BxQn4ODKyJkX1JACyXmILRE/++50BS3ylnFytRRWYOJjeeTcOS8o9B00ENTqA==}
+  yet-another-react-lightbox@3.23.3:
+    resolution: {integrity: sha512-qRc2n9EWYIzSAXhEBzWN1SkYe36H8QyYTiIeP/BEp3nRI3JcWh1ii1DCUG5hR64Vk+2yagM7izGISZCNkEtk7A==}
     engines: {node: '>=14'}
     peerDependencies:
       '@types/react': ^16 || ^17 || ^18 || ^19
@@ -2144,7 +2144,7 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yet-another-react-lightbox@3.23.2(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  yet-another-react-lightbox@3.23.3(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
