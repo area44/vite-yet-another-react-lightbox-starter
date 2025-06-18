@@ -7,9 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "format": "prettier --write . --cache",
-    "lint": "eslint . --ext .ts,.tsx",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "biome format --write .",
+    "lint": "biome lint --write .",
+    "check": "biome check --write ."
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.5.2",
