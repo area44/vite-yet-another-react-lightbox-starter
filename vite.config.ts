@@ -1,17 +1,17 @@
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import react from "@vitejs/plugin-react";
+import path from "path";
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: process.env.CI
-    ? '/vite-yet-another-react-lightbox-starter/'
+    ? "/vite-yet-another-react-lightbox-starter/"
     : undefined,
   resolve: {
     alias: {
-      '@': path.resolve('./src'),
+      "@": path.resolve("./src"),
     },
   },
   plugins: [react()],
-})
+});
