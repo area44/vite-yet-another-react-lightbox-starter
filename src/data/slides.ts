@@ -76,7 +76,7 @@ const unsplashPhotos: UnsplashPhoto[] = [
   { id: "Y1gBZbB_5bA", width: 1080, height: 720 },
 ];
 
-export const slides: Slide[] = unsplashPhotos.map(({ id, width, height }) => {
+export default slides: Slide[] = unsplashPhotos.map(({ id, width, height }) => {
   const scaledWidth = width * SCALE_FACTOR;
   const scaledHeight = height * SCALE_FACTOR;
 
