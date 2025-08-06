@@ -1,10 +1,18 @@
+type Slide = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  srcSet: { src: string; width: number; height: number }[];
+};
+
 const breakpoints = [3840, 1920, 1080, 640, 384, 256, 128];
 
 function imageLink(asset: string, size: number) {
   return `https://images.yet-another-react-lightbox.com/${asset}.${size}w.jpg`;
 }
 
-export const slides = [
+const rawAssets = [
   { asset: "image01.0800ee93.3840x5760" },
   { asset: "image02.645bc7e4.3840x5070" },
   { asset: "image03.13c5eeb7.3840x5120" },
@@ -56,7 +64,9 @@ export const slides = [
   { asset: "image49.76bd7f09.3840x2560" },
   { asset: "image50.ca342ccd.3840x5760" },
   { asset: "image51.06c02a19.3840x2560" },
-].map(({ asset, ...rest }) => {
+];
+
+export const slides: Slide[] = rawAssets.map(({ asset }) => {
   const matcher = asset.match(/\.(\d+)x(\d+)$/)!;
   const width = Number.parseInt(matcher[1], 10);
   const height = Number.parseInt(matcher[2], 10);
@@ -65,70 +75,13 @@ export const slides = [
     src: imageLink(asset, width),
     width,
     height,
+    alt: "Gallery image",
     srcSet: breakpoints.map((breakpoint) => ({
       src: imageLink(asset, breakpoint),
       width: breakpoint,
       height: Math.round((height / width) * breakpoint),
     })),
-    ...rest,
   };
 });
-
-export const advancedSlides = [
-  { ...slides[0], title: "Puppy in sunglasses", description: "Mollie Sivaram" },
-  {
-    ...slides[1],
-    title: "Miami Beach",
-    description:
-      "Clark Van Der Beken\n\nSouth Beach, Miami Beach, Florida, United States",
-  },
-  {
-    ...slides[2],
-    title: "Flamingo",
-    description: "Vicko Mozara\n\nVeliki zali, Dubravica, Croatia",
-  },
-  {
-    type: "video" as const,
-    title: "Big Buck Bunny",
-    description:
-      "The Peach Open Movie Project\n\nBlender Institute, Netherlands",
-    width: 1280,
-    height: 720,
-    poster:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
-    sources: [
-      {
-        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        type: "video/mp4",
-      },
-    ],
-  },
-  {
-    ...slides[3],
-    title: "Starfish on a sand beach",
-    description: "Pedro Lastra\n\nKey West, Florida, United States",
-  },
-  {
-    ...slides[6],
-    title:
-      "The last night of a two week stay on the North Shore of Oahu, Hawaii",
-    description: "Sean Oulashin\n\nNorth Shore, Waialua, Hawaii, United States",
-  },
-  {
-    ...slides[7],
-    title: "Sunset on Kauai",
-    description: "Cristofer Maximilian\n\nKauai, Hawaii, United States",
-  },
-  {
-    ...slides[9],
-    title: "RayBan sunglasses",
-    description: "Ethan Robertson\n\nSanta Monica, California, United States",
-  },
-  {
-    ...slides[11],
-    title: "Find the time",
-    description: "Alex Perez\n\nNaples, Florida, United States",
-  },
-];
 
 export default slides;

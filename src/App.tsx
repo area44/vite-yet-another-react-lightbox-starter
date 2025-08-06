@@ -1,31 +1,38 @@
 import * as React from "react";
-import PhotoAlbum from "react-photo-album";
+import { RowsPhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+
+import "react-photo-album/rows.css";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "@/styles/index.css";
 
-import slides from "./data/slides";
+import { slides } from "@/data/slides";
 
 export default function PhotoGallery() {
-  const [index, setIndex] = React.useState(-1);
+  const [lightboxIndex, setLightboxIndex] = React.useState(-1);
 
   return (
-    <>
-      <PhotoAlbum
-        layout="rows"
-        photos={slides}
-        targetRowHeight={150}
-        onClick={({ index }) => setIndex(index)}
-      />
+    <section className="gallery-section">
+      <div className="album-wrapper">
+        <RowsPhotoAlbum
+          photos={slides.map((slide) => ({
+            ...slide,
+            alt: slide.alt || "Gallery image",
+          }))}
+          targetRowHeight={180}
+          onClick={({ index }) => setLightboxIndex(index)}
+        />
+      </div>
 
       <Lightbox
-        open={index >= 0}
-        index={index}
-        close={() => setIndex(-1)}
+        index={lightboxIndex}
         slides={slides}
+        open={lightboxIndex >= 0}
+        close={() => setLightboxIndex(-1)}
         plugins={[Thumbnails]}
       />
-    </>
+    </section>
   );
 }
