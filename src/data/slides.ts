@@ -1,8 +1,10 @@
-type Slide = {
+export type Slide = {
   src: string;
   width: number;
   height: number;
-  alt: string;
+  alt?: string;
+  title?: string;
+  description?: string;
   srcSet: { src: string; width: number; height: number }[];
 };
 
@@ -66,7 +68,7 @@ const rawAssets = [
   { asset: "image51.06c02a19.3840x2560" },
 ];
 
-export const slides: Slide[] = rawAssets.map(({ asset }) => {
+export const slides: Slide[] = rawAssets.map(({ asset }, index) => {
   const matcher = asset.match(/\.(\d+)x(\d+)$/)!;
   const width = Number.parseInt(matcher[1], 10);
   const height = Number.parseInt(matcher[2], 10);
@@ -75,7 +77,9 @@ export const slides: Slide[] = rawAssets.map(({ asset }) => {
     src: imageLink(asset, width),
     width,
     height,
-    alt: "Gallery image",
+    alt: `Gallery image ${index + 1}`,
+    title: `Image ${index + 1} Title`,
+    description: `This is a description for gallery image ${index + 1}.`,
     srcSet: breakpoints.map((breakpoint) => ({
       src: imageLink(asset, breakpoint),
       width: breakpoint,
