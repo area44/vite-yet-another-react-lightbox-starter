@@ -78,7 +78,7 @@ export const slides: Slide[] = rawAssets.map(({ asset }, index) => {
     width,
     height,
     alt: `Gallery image ${index + 1}`,
-    title: `Image ${index + 1} Title`,
+    description: `This is a description for gallery image ${index + 1}.`,
     srcSet: breakpoints.map((breakpoint) => ({
       src: imageLink(asset, breakpoint),
       width: breakpoint,
