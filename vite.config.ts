@@ -7,10 +7,10 @@ const base = process.env.BASE || "/";
 // https://vitejs.dev/config/
 export default defineConfig({
   base,
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve("./src"),
     },
   },
-  plugins: [react()],
 });
