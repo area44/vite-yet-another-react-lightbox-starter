@@ -11,7 +11,7 @@ export type Slide = {
 const breakpoints = [3840, 1920, 1080, 640, 384, 256, 128];
 
 function imageLink(asset: string) {
-  return `/images/${asset}.jpg`;
+  return `${import.meta.env.BASE_URL}images/${asset}.jpg`;
 }
 
 const rawAssets = [
