@@ -10,8 +10,8 @@ export type Slide = {
 
 const breakpoints = [3840, 1920, 1080, 640, 384, 256, 128];
 
-function imageLink(asset: string, size: number) {
-  return `https://images.yet-another-react-lightbox.com/${asset}.${size}w.jpg`;
+function imageLink(asset: string) {
+  return `/images/${asset}.jpg`;
 }
 
 const rawAssets = [
@@ -74,13 +74,14 @@ export const slides: Slide[] = rawAssets.map(({ asset }, index) => {
   const height = Number.parseInt(matcher[2], 10);
 
   return {
-    src: imageLink(asset, width),
+    src: imageLink(asset),
     width,
     height,
     alt: `Gallery image ${index + 1}`,
+    title: `Gallery image ${index + 1}`,
     description: `This is a description for gallery image ${index + 1}.`,
     srcSet: breakpoints.map((breakpoint) => ({
-      src: imageLink(asset, breakpoint),
+      src: imageLink(asset),
       width: breakpoint,
       height: Math.round((height / width) * breakpoint),
     })),
